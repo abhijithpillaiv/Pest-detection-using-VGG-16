@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+      
+<style>
+
+
+
+html{
+    background-color:#ebebec;
+
+    background-image:-webkit-radial-gradient(center, #ebebec, #b4b4b4);
+    background-image:-moz-radial-gradient(center, #ebebec, #b4b4b4);
+    background-image:radial-gradient(center, #ebebec, #b4b4b4);
+
+    min-height:900px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: linear-gradient(to top right, darkmagenta 0%, hotpink 100%);
+    color: #333;
+    font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 260px;
+    border-radius: 3px;
+    box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.2);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.title {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #999;
+    text-align: center;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: 300;
+    color: #666;
+}
+
+.dropzone {
+    width: 100px;
+    height: 80px;
+    border: 1px dashed #999;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.upload-icon {
+    margin: 25px 2px 2px 2px;
+}
+
+.upload-input {
+    position: relative;
+    top: -62px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.btn {
+    display: block;
+    width: 140px;
+    height: 40px;
+    background: darkmagenta;
+    color: #fff;
+    border-radius: 3px;
+    border: 0;
+    box-shadow: 0 3px 0 0 hotpink;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+.btns {
+    display: block;
+    width: 140px;
+    height: 20px;
+     margin: auto;
+    background: darkmagenta;
+    color: #fff;
+    border-radius: 3px;
+    border: 0;
+    box-shadow: 0 3px 0 0 hotpink;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: rebeccapurple;
+    box-shadow: 0 3px 0 0 deeppink;
+}
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.2);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  background: #fff !important;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+  text-align: center;
+}
+        a:link {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+    
+  
+        <!-- Google web fonts -->
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
+
+        
+    </head>
+    
+
+    <body>
+{% if image %}
+<div class="card">
+    <div class="title">
+    <h4><b>{{v_pred}}</b></h4>
+    </div>
+    <img src="{{image}}" alt="" style="width:40%">
+  <div class="container">
+  <!---- <p><span>Confidence Result:</span>{{v_cf}}</p> --> 
+  </div>
+   {% if v_pred %}
+    {% if v_pred %}
+        {% if v_pred == 'aphids' %}
+    <div style="text-align: center; ">
+        <p>Aphids are soft-bodied insects that use their piercing sucking mouthparts to feed on plant sap.</p>
+        <p>They usually occur in colonies on the undersides of tender terminal growth.</p> 
+        <p>Heavily-infested leaves can wilt or turn yellow because of excessive sap removal.</p> 
+        <p>While the plant may look bad, aphid feeding generally will not seriously harm healthy, established trees and shrubs.</p>
+    </div>
+    {% elif  v_pred == 'armyworm' %}
+    <div style="text-align: center; ">
+        <p>Armyworms belong to the insect order Lepidoptera and family Noctuidae.</p>
+        <p>Common species of armyworms present in Texas include: the fall armyworm (Spodoptera frugiperda) the yellowstriped armyworm (Spodoptera ornithogalli) the beet armyworm (Spodoptera exigua) and the true armyworm.</p>
+        <p>Armyworm is the most common cause of damaged turfgrass on golf courses, athletic fields, and home landscapes. </p>
+    {% elif  v_pred == 'beetle' %}
+    <div style="text-align: center; ">
+        <p>Beetles belongs to the Meloidae family of beetles that secretes toxic Cantharidin</p> 
+        <p>Cantharidin is harmful to humans and livestock. </p>
+        <p>The Coleoptera, with about 400,000 described species, is the largest of all orders, constituting almost 40% of described insects and 25% of all known animal life-forms;</p>
+        <p>Species are discovered frequently, with estimates suggesting that there are between 0.9 to 2.1 million total species.</p>
+        <p>In almost every habitat except the sea and the polar regions, they interact with their ecosystems in several ways: beetles often feed on plants and fungi, break down animal and plant debris, and eat other invertebrates.</p>
+        <p>Species are serious agricultural pests, such as the Colorado potato beetle, while others such as Coccinellidae eat aphids, scale insects, thrips, and other plant-sucking insects that damage crops.</p>
+    </div>
+    {% elif  v_pred == 'bollworm' %}
+    <div style="text-align: center; ">
+        <p>Bollworm, any larvae of various moths (order Lepidoptera), including the pink bollworm (Pectinophora gossypiella, family Gelechiidae)</p>
+        <p>These larvae are mostly known for the damage they inflict on cotton bolls, a variety of plants are attacked by bollworms, including peas, alfalfa, beans, soybeans, flax, peanuts, and other commercial crops.</p>
+        <p>Larvae of the corn earworm generally feed on corn kernels but can also burrow into tomatoes and cotton bolls and are thus sometimes known as tomato fruitworms or cotton bollworms.</p>
+    </div>
+    {% elif  v_pred == 'grasshopper' %}
+    <div style="text-align: center; ">
+        <p>Grasshoppers occur in greatest numbers in lowland tropical forests, semiarid regions, and grasslands. </p>
+        <p>Grasshoppers are the kind of insects that are found in warmer regions.</p>
+        <p>Grasshoppers can't bear the cold weather and, therefore, are hard to be seen in North and South poles.</p>
+        <p>Majority of the grasshoppers feed on plants – flowers, leaves, seeds, and stems.</p>
+        <p>Not all grasshoppers are the same, and that is why some of them are quite picky eaters and first have sample foods before actually eating them.</p>
+    </div>
+    {% elif  v_pred == 'mites' %}
+    <div style="text-align: center; ">
+        <p>Mite refer to a group of insect-like organisms, some of which bite or cause irritation to humans. </p>
+        <p>While some mites parasitize animals, including man, others are scavengers, some feed on plants, and many prey on insects and other arthropods.</p>
+    </div>
+    {% elif  v_pred == 'mosquito' %}
+    <div style="text-align: center; ">
+        <p>Mosquitoes belong to the group of insects known as diptera, or flies. In fact, mosquito means “little fly” in Spanish. </p>
+        <p>Mosquito, (family Culicidae), any of approximately 3,500 species of familiar insects in the fly order, Diptera, that are important in public health because of the bloodsucking habits of the females.</p>
+        <p>Mosquito are known to transmit serious diseases, including yellow fever, Zika fever, malaria, filariasis, and dengue.</p>
+    </div>
+    {% elif  v_pred == 'sawfly' %}
+    <div style="text-align: center; ">
+        <p>Sawflies are the insects of the suborder Symphyta within the order Hymenoptera alongside ants, bees and wasps.</p>
+        <p>Sawflies are related to wasps and bees.</p>
+        <p>Mosquito name comes from the saw-like ovipositor (egg-laying structure) of adult females.</p>
+        <p>Sawflies are small, stout-bodied, non-stinging wasp-like insects, although they are seldom noticed in the landscape.</p>
+    </div>
+    {% else %}
+    <div style="text-align: center; ">
+        <p>Stem borers can destroy rice at any stage of the plant from seedling to maturity.</p>
+        <p>Stem borer larvae bore at the base of the plants during the vegetative stage.The stem borer larvae bore at the base of the plants during the vegetative stage. On older plants, they bore through the upper nodes and feed toward the base.
+        <p>Yellow stem borer is a pest of deepwater rice.</p>
+        <p>It is found in aquatic environments where there is continuous flooding.</p>
+        <p>Second instar larvae enclose themselves in body leaf wrappings to make tubes and detach themselves from the leaf and falls onto the water surface.</p>
+        <p>Attach themselves to the tiller and bore into the stem.</p>
+    </div>
+     {% endif %}
+     {% endif %}
+     {% endif %}
+     <br>
+     <div style="text-align: center; ">
+       <!-- <a class="btns" name="uploadbutton" href="/search">Get Solution</a><br/> -->
+        <a class="btns" name="uploadbutton" href="/farmerhome">Home</a><br/>
+    </div>
+    <br>
+</div>
+        {% else %}
+            <form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <div class="center">
+        <div class="title">
+            <h1>Detect Pest</h1>
+        </div>
+        <div class="dropzone">
+            <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+            <input type="file" class="upload-input" name="myfile" /></div> 
+            <button type="submit" class="btn" name="uploadbutton">Upload file</button>
+            
+    </div>
+    
+ </form>
+        {% endif %}
+ 
+
+
+
+        <!-- JavaScript Includes -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="assets/js/jquery.knob.js"></script>
+
+        <!-- jQuery File Upload Dependencies -->
+        <script src="assets/js/jquery.ui.widget.js"></script>
+        <script src="assets/js/jquery.iframe-transport.js"></script>
+        <script src="assets/js/jquery.fileupload.js"></script>
+
+        <!-- Our main JS file -->
+        <script src="assets/js/script.js"></script>
+    
+
+    </body>
+</html>

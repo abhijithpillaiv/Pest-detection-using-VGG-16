@@ -1,0 +1,18 @@
+<html>
+
+{% block title %}Delete Todo {%endblock%}
+
+{%block content%}
+
+<form method="POST">
+
+    {%csrf_token%}
+
+    <p style="text-align:center; font-size:50px;">Do you want to delete<br> {{ modules.name}}</p>
+
+    <input style="margin-left:500px; background-color:blueviolet;" type="submit" name="delete" value="YES">
+
+</form>
+
+{%endblock%}
+</html>

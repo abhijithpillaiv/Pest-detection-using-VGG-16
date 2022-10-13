@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+ 
+  
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- base:css -->
+  <link rel="stylesheet" href="{% static 'vendors4/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors4/css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css4/style.css' %}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'images4/favicon.png' %}" />
+</head>
+<body style="background-color:lightblue ;">
+  <div class="container-scroller d-flex">
+    <!-- partial:./partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <ul class="nav">
+        <li class="nav-item sidebar-category">
+          <p></p>
+          <span></span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">
+            <i class="mdi mdi-view-quilt menu-icon"></i>
+            <span class="menu-title">ADMIN</span>
+          
+          </a>
+        </li>
+       
+        <li class="nav-item sidebar-category">
+          <p></p>
+          <span></span>
+        </li>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/farmer">
+          <i class="mdi mdi-account menu-icon "></i>
+          <span class="menu-title">FARMER</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/user">
+          <i class="mdi mdi-account menu-icon "></i>
+          <span class="menu-title">USER</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/krishi">
+          <i class="mdi mdi-account menu-icon "></i>
+          <span class="menu-title">KRISHIBHAVAN</span>
+        </a>
+      </li>
+       <li class="nav-item">
+          <a class="nav-link" href="/logout">
+            <i class="mdi mdi-logout menu-icon "></i>
+            <span class="menu-title">LOGOUT</span>
+          </a>
+        </li>
+     
+        
+        
+      </ul>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:./partials/_navbar.html -->
+      <nav>
+        
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+       
+          
+          <!-- row end -->
+          <div class="row">
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card bg-facebook d-flex align-items-center">
+                <div class="card-body py-5">
+                  <div
+                    class="d-flex flex-row align-items-center flex-wrap justify-content-md-center justify-content-xl-start py-1">
+                    <i class="mdi mdi-facebook text-white icon-lg"></i>
+                    <div class="ml-3 ml-md-0 ml-xl-3">
+                      <h5 class="text-white font-weight-bold">2.62 Subscribers</h5>
+                      <p class="mt-2 text-white card-text">You main list growing</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card bg-google d-flex align-items-center">
+                <div class="card-body py-5">
+                  <div
+                    class="d-flex flex-row align-items-center flex-wrap justify-content-md-center justify-content-xl-start py-1">
+                    <i class="mdi mdi-google-plus text-white icon-lg"></i>
+                    <div class="ml-3 ml-md-0 ml-xl-3">
+                      <h5 class="text-white font-weight-bold">3.4k Followers</h5>
+                      <p class="mt-2 text-white card-text">You main list growing</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card bg-twitter d-flex align-items-center">
+                <div class="card-body py-5">
+                  <div
+                    class="d-flex flex-row align-items-center flex-wrap justify-content-md-center justify-content-xl-start py-1">
+                    <i class="mdi mdi-twitter text-white icon-lg"></i>
+                    <div class="ml-3 ml-md-0 ml-xl-3">
+                      <h5 class="text-white font-weight-bold">3k followers</h5>
+                      <p class="mt-2 text-white card-text">You main list growing</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row end -->
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:./partials/_footer.html -->
+        
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- base:js -->
+  <script src="{% static 'vendors4/js/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="{% static 'vendors4/chart.js/Chart.min.js' %}"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{% static 'js4/off-canvas.js' %}"></script>
+  <script src="{% static 'js4/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js4/template.js' %}"></script>
+  <!-- endinject -->
+  <!-- plugin js for this page -->
+  <!-- End plugin js for this page -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'js4/dashboard.js' %}"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{%load crispy_forms_tags %}
+<!-- Basic -->
+
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+    <link rel="stylesheet" media="all"  href="{% static 'vendor1/mdi-font/css/material-design-iconic-font.min.css' %}">
+    <link rel="stylesheet" media="all" href="{% static 'vendor1/font-awesome-4.7/css/font-awesome.min.css' %}" >
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link  rel="stylesheet" media="all" href="{% static 'vendor1/select2/select2.min.css' %}">
+    <link  rel="stylesheet" media="all" href="{% static 'vendor1/datepicker/daterangepicker.css' %}">
+
+    <!-- Main CSS-->
+    <link href="{% static 'css1/main.css' %}" rel="stylesheet" media="all">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="apple-touch-icon" href="">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body >
+   
+
+    <header class="main-header">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                    <!--<a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt=""></a>-->
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/aboutus">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">LOGIN</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/admin_login">Admin</a></li>
+                                <li><a href="/farmer_login">FARMER</a></li>
+                                <li><a href="/krishi_login">KRISHIBHAVAN</a></li>
+                               
+                    </ul>
+                </li>
+                       <!---- <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
+                            <ul class="dropdown-menu">
+								<li><a href="shop.html">Sidebar Shop</a></li>
+								<li><a href="shop-detail.html">Shop Detail</a></li>
+                                <li><a href="cart.html">Cart</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="wishlist.html">Wishlist</a></li>
+                                </ul>-->
+                                <li class="dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">REGISTRATION</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/farmer_register">FARMER</a></li>
+                                        <li><a href="/krishi_register">KRISHIBHAVAN</a></li>
+                                       
+                            </ul>
+                        </li>
+                       <!---- <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>-->
+                        <li class="nav-item"><a class="nav-link" href="/contactus">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+
+                <!-- Start Atribute Navigation -->
+             <!----   <div class="attr-nav">
+                    <ul>
+                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li class="side-menu">
+							<a href="#">
+								<i class="fa fa-shopping-bag"></i>
+								<span class="badge">3</span>
+								<p>My Cart</p>
+							</a>
+						</li>
+                    </ul>
+                </div>-->
+                <!-- End Atribute Navigation -->
+            </div>
+            <!-- Start Side Menu -->
+            
+            <!-- End Side Menu -->
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Registration Form</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}    
+            
+                        
+                        <div class="form-row">
+                            <div class="name">Name</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Address</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="address">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">phone</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Email</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Place</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="place">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Pincode</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="pincode">
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="form-row">
+                            <div class="name">username</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="password" name="username">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">password</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="password" name="pass1">
+                                </div>
+                            </div>
+                        </div>
+
+                   
+                       
+                        <div>
+                            <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static 'vendor1/jquery/jquery.min.js' %}"></script>
+    <!-- Vendor JS-->
+    <script src="{% static 'vendor1/select2/select2.min.js' %}"></script>
+    <script src="{% static 'vendor1/datepicker/moment.min.js' %}"></script>
+    <script src="{% static 'vendor1/datepicker/daterangepicker.js' %}"></script>
+
+    <!-- Main JS-->
+    <script src="{% static 'js1/global.js' %}"></script>
+
+
+ 
+        
+    
+    <!-- End Instagram Feed  -->
+
+
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+				<div class="row">
+                    <div class="footer-link-contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                           
+                            <li>
+                                <p><i class="fas fa-phone-square"></i>help desk: <a href="tel:+1-888705770"> 9856788844</a></p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">plantix@gmail.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-widget">
+                            <h4>About Plantix</h4>
+                            <p>Plantix is the most prominent  platform for farmers. We have designed a
+                                user-friendly and straightforward website with which you can accurately detect crop diseases
+                                within a few seconds. Here is the perfect solution for crop diagnosis that will help 
+                                boost your yield.</p> 
+														
+                        </div>
+                    </div>
+                   
+					
+					
+					<div class="col-lg-4 col-md-12 col-sm-12">
+						<div class="footer-top-box">
+                           
+							<h3>Social Media</h3>
+							<p> </p>
+							<ul>
+                                <li><a href="https://www.facebook.com/null"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/null"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="https://myaccount.google.com/"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a href="https://whatsapp.com/null"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                              
+                            </ul>
+						</div>
+					</div>
+				</div>
+				<hr>
+                
+            </div>
+        </div>
+    </footer>
+ 
+
+    <!-- Start copyright  -->
+    <div class="footer-copyright">
+        <p class="footer-company">All Rights Reserved. &copy; 2022 <a href="#">Plantix</a> Design By :
+            <a href="https://html.design/">html design</a></p>
+    </div>
+    <!-- End copyright  -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+    <!-- ALL JS FILES -->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{% static 'js/jquery.superslides.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-select.js' %}"></script>
+    <script src="{% static 'js/inewsticker.js' %}"></script>
+    <script src="{% static 'js/bootsnav.js.' %}"></script>
+    <script src="{% static 'js/images-loded.min.js' %}"></script>
+    <script src="{% static 'js/isotope.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/baguetteBox.min.js' %}"></script>
+    <script src="{% static 'js/form-validator.min.js' %}"></script>
+    <script src="{% static 'js/contact-form-script.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>

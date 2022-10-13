@@ -1,0 +1,58 @@
+
+<html>
+    {%load crispy_forms_tags %}
+    <head>
+        <style>
+           
+    .search-sec{
+        padding: 3rem;
+    }
+    .search-slt{
+        display:none;
+        width: 500%;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        background-color: rgb(218, 16, 16);
+        background-image: none;
+        border: 1px solid #ccc;
+        height: calc(3rem + 2px) !important;
+        border-radius:0;
+        padding:3rem ;
+    }
+    .wrn-btn{
+        
+        width: 80%;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+        height: calc(3rem + 2px) !important;
+        border-radius:0;
+    }
+            </style>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+    <body>
+    <section class="search-sec">
+        <div class="container">
+            <form action="" method="post" novalidate="novalidate">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <input type="search" class="form-control search-slt" name="query" id="query" placeholder="Enter Search">
+                            </div>
+                           
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <button type="button"   name="query" class="btn btn-danger wrn-btn"  type="submit" >Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    </body>
+    </html>

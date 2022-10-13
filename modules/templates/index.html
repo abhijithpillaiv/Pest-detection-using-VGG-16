@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<!-- Basic -->
+
+<head>
+    <style>
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+ 
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="apple-touch-icon" href="">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+   
+</head>
+
+<body>
+    <script type="text/javascript">
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>
+    
+    <!-- Start Main Top -->
+    <header class="main-header">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                    <!--<a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt=""></a>-->
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/aboutus">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">LOGIN</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/admin_login">Admin</a></li>
+                                <li><a href="/farmer_login">FARMER</a></li>
+                                <li><a href="/krishi_login">KRISHIBHAVAN</a></li>
+                               
+                    </ul>
+                </li>
+                     
+                                <li class="dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">REGISTRATION</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/farmer_register">FARMER</a></li>
+                                        <li><a href="/krishi_register">KRISHIBHAVAN</a></li>
+                                       
+                            </ul>
+                        </li>
+                       <!---- <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>-->
+                        <li class="nav-item"><a class="nav-link" href="/contactus">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- Start Side Menu -->
+            
+            <!-- End Side Menu -->
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Main Top -->
+
+    <!-- Start Top Search -->
+    <div class="top-search">
+        <div class="container">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Search -->
+
+    <!-- Start Slider -->
+    <div id="slides-shop" class="cover-slides">
+        <ul class="slides-container">
+            <li class="text-center">
+                <img src="{% static 'images/insect.jpg' %}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> Plantix</strong></h1>
+                            <p class="m-b-40">Whats Eating Your Garden?</p>
+                            <p><a class="btn hvr-hover" href="/aboutus">read more</a></p>
+                           <!---- <button class="button"><a href="shop.html">Sidebar Shop</a></button>-->
+                            <!--<h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
+                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
+                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>-->
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-center">
+                <img src="{% static 'images/a9.jpg' %}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> Plantix</strong></h1>
+                            <p class="m-b-40">Whats Eating Your Garden?</p>
+                            <p><a class="btn hvr-hover" href="/aboutus">read more</a></p>
+                          <!--  <h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
+                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
+                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>-->
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-center">
+                <img src="{% static 'images/s.jpg' %}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                             <h1 class="m-b-20"><strong>Welcome To <br> Plantix</strong></h1>
+                            <p class="m-b-40">Whats Eating Your Garden?</p>
+                            <p><a class="btn hvr-hover" href="/aboutus">read more</a></p>-->
+                            
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="slides-navigation">
+            <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <!-- End Slider -->
+
+    <!-- Start Categories  -->
+    <div class="categories-shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="{% static 'images/a5.jpg' %}" alt="" />
+                        <a class="btn hvr-hover" href="#"></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="{% static 'images/a11.jpeg' %}" alt="" />
+                        <a class="btn hvr-hover" href="#"></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="{% static 'images/a4.jpg' %}" alt="" />
+                        <a class="btn hvr-hover" href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+
+    <!-- Start Footer  -->
+<footer>
+        <div class="footer-main">
+            <div class="container">
+				<div class="row">
+                    <div class="footer-link-contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                           
+                            <li>
+                                <p><i class="fas fa-phone-square"></i>help desk: <a href="tel:+1-888705770"> 9856788844</a></p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">plantix@gmail.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-widget">
+                            <h4>About Plantix</h4>
+                            <p>Plantix is the most prominent  platform for farmers. We have designed a
+                                user-friendly and straightforward website with which you can accurately detect crop diseases
+                                within a few seconds. Here is the perfect solution for crop diagnosis that will help 
+                                boost your yield.</p> 
+														
+                        </div>
+                    </div>
+                   
+					
+					
+					<div class="col-lg-4 col-md-12 col-sm-12">
+						<div class="footer-top-box">
+                           
+							<h3>Social Media</h3>
+							<p> </p>
+							<ul>
+                                <li><a href="https://www.facebook.com/null"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/null"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="https://myaccount.google.com/"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a href="https://whatsapp.com/null"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                              
+                            </ul>
+						</div>
+					</div>
+				</div>
+				<hr>
+                
+            </div>
+        </div>
+    </footer>
+ 
+
+    <!-- Start copyright  -->
+    <div class="footer-copyright">
+        <p class="footer-company">All Rights Reserved. &copy; 2022 <a href="#">Plantix</a> Design By :
+            <a href="https://html.design/">html design</a></p>
+    </div>
+    <!-- End copyright  -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+    <!-- ALL JS FILES -->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{% static 'js/jquery.superslides.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-select.js' %}"></script>
+    <script src="{% static 'js/inewsticker.js"></script>
+    <script src="{% static 'js/bootsnav.js.' %}"></script>
+    <script src="{% static 'js/images-loded.min.js' %}"></script>
+    <script src="{% static 'js/isotope.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/baguetteBox.min.js' %}"></script>
+    <script src="{% static 'js/form-validator.min.js' %}"></script>
+    <script src="{% static 'js/contact-form-script.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>

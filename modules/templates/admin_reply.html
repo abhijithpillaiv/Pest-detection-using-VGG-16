@@ -1,0 +1,142 @@
+
+	
+    <!DOCTYPE html>
+    <html lang="en">
+    {% load static %}
+    <!-- Basic -->
+    
+    <head>
+        <style>
+            p,h1{
+                color: white;
+                font-style: italic;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: xx-large;
+    
+            }
+            
+            .b1 {
+            background-color: #d87016;
+            border: none;
+            color: white;
+            padding: 14px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 30px;
+          }
+          .centered {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+          </style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!-- Site Metas -->
+     
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
+    
+        <!-- Site Icons -->
+        <link rel="shortcut icon" href="" type="image/x-icon">
+        <link rel="apple-touch-icon" href="">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <!-- Site CSS -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+        <![endif]-->
+        <style media="screen">
+          a:link {
+            text-decoration: none;
+          }
+      
+          h6 {
+            text-align: center;
+          }
+      
+          .row {
+            margin: 100px;
+          }
+        </style>
+    
+    </head>
+    
+    <body>
+    
+ 
+
+		<div class="wrapper">
+			<div class="inner">
+        <form id="myform" method="post" action="/reply/{{id}}/">
+
+                    {% csrf_token %}
+                    
+                    <div class="row">
+                        
+                       
+                        <div class="col-md-12">
+                            <div class="form-group">
+                       <textarea class="form-control" id="message" placeholder="Your Message" name="reply" rows="4" data-error="Write your message" required></textarea>
+            
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="submit-button text-center">
+                                <button class="btn hvr-hover" id="submit" type="submit">Send Message</button>
+                                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <!-- Hero 
+    <section class="hero-section s-bg-light" id="home">
+        <div class="container">
+            <div class="row flex-column">
+                <div class="col-xl-10 mx-auto">
+                    <div class="hero-content text-center">
+                        <div class="section-header">
+                            <p class="subheading">CORONAVIRUS PREVENTION</p>
+                        </div>
+                        <h1>
+                            Keep yourself at your home quarantine <br>
+                            <span class="text-primary">Stay Home, Stay Safe.</span>
+                        </h1>
+                       
+                    </div>
+                </div>-->
+
+      
+   
+
+
+    
+
+
+    
+
+</body></html>
